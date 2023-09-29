@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmrcdpsyxtxpi"]
+
+[ext_resource type="Script" path="res://Cube.gd" id="1_na1s1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pdxrk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0srwu"]
+albedo_color = Color(0, 0.741176, 0.341176, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tx1yt"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Cube" type="RigidBody3D"]
+script = ExtResource("1_na1s1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_pdxrk")
+surface_material_override/0 = SubResource("StandardMaterial3D_0srwu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tx1yt")

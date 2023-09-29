@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy2umlrgqrfil"]
+[gd_scene load_steps=5 format=3 uid="uid://cy2umlrgqrfil"]
 
 [ext_resource type="Script" path="res://circle.gd" id="1_f68i1"]
-[ext_resource type="PackedScene" uid="uid://c88gbygomu8hu" path="res://brick.tscn" id="2_lxkk5"]
+[ext_resource type="PackedScene" uid="uid://dmrcdpsyxtxpi" path="res://cube.tscn" id="3_w0anr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_601sx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vigab"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="circle" type="Node3D"]
 script = ExtResource("1_f68i1")
-brickScene = ExtResource("2_lxkk5")
+brickScene = ExtResource("3_w0anr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.865472, -0.450583, 0.218938, 0.464492, -0.885469, 0.0138291, 0.187632, 0.113664, 0.975641, 1.48802, 0, 8.22675)
+shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.73019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 0, 0, -10)
+mesh = SubResource("PlaneMesh_601sx")
+surface_material_override/0 = SubResource("StandardMaterial3D_vigab")
