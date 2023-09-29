@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://cxxvamwxynr2e"]
 
-[ext_resource type="Material" path="res://green.tres" id="1_4wjot"]
+[ext_resource type="Material" uid="uid://cpg5h3e60f4bg" path="res://green.tres" id="1_4wjot"]
 [ext_resource type="Script" path="res://tank1.gd" id="2_n83ob"]
 [ext_resource type="Material" path="res://Tank Material.tres" id="2_y21kj"]
 [ext_resource type="Script" path="res://wall.gd" id="3_rwbqd"]
