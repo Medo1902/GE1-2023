@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjc7u716ug0iw"]
+
+[ext_resource type="Script" path="res://circle.gd" id="1_sfv45"]
+[ext_resource type="PackedScene" uid="uid://blr0w3i23pbyt" path="res://brick.tscn" id="2_y8msd"]
+
+[node name="circle" type="Node3D"]
+script = ExtResource("1_sfv45")
+width = 2
+height = 2
+brickScene = ExtResource("2_y8msd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
