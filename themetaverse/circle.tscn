@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://r3ik1bdl2gmp"]
+[gd_scene load_steps=3 format=3 uid="uid://cy2umlrgqrfil"]
 
 [ext_resource type="Script" path="res://circle.gd" id="1_f68i1"]
-[ext_resource type="PackedScene" uid="uid://c6xhwirvnwrnp" path="res://brick.tscn" id="2_lxkk5"]
+[ext_resource type="PackedScene" uid="uid://c88gbygomu8hu" path="res://brick.tscn" id="2_lxkk5"]
 
 [node name="circle" type="Node3D"]
 script = ExtResource("1_f68i1")
